@@ -22,11 +22,15 @@ public static ArrayList<Integer> perms = new ArrayList<Integer>();
     }
 
     public static int getNextPermutation(int[] digits) {
-        for (int i = 1; i < digits.length; i++) {
-            // 1. Find the suffix S
-            // 2. Find the pivot P
-            // 3. Swap P with the smallest number n in S where Sn > P
-            // 4. Sort S in ascending order
+        // 1. Find the suffix S
+        // 2. Find the pivot P
+        // 3. Swap P with the smallest number n in S where Sn > P
+        // 4. Sort S in ascending order
+        // 5. Add to list
+        // 6. Get next permutation
+        int s, sn, p;
+        for (int i = digits.length-1; i > 0; i--) {
+            if (digits[i] < digits[i-1]); 
         }
 
 

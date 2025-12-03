@@ -6,12 +6,28 @@
  * such that for every divisor d of n, d+n/d is prime.
  */
 
+import java.util.ArrayList;
+
 public class PrimeGeneratingIntegers {
+
+    public static int sum = 0;
 
     public static void main(String[] args) {
         for (int n = 1; n < 100000000; n++) {
-            
+            ArrayList<Integer> divisors = getDivisors(n);
         }
+    }
+
+    private static ArrayList<Integer> getDivisors(int n) {
+        ArrayList<Integer> divisors = new ArrayList<Integer>();
+        int sqrt = (int) Math.sqrt(n);
+        for (int i = 1; i <= sqrt; i++) {
+            if (n % i == 0) {
+                divisors.add(i);
+                if (i != n/i) divisors.add(n/i);
+            }
+        }
+        return divisors;
     }
     
 }
